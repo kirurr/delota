@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#wrapper {
+  box-shadow: 0rem 0.625rem 0.875rem 0rem #3d3232;
+}
+
+html {
+  /* scrollbar-gutter: stable; */
+  font-family: 'Work Sans', sans-serif;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+.button {
+  @apply rounded-xl text-bg bg-[#ab9993] transition-all;
+  box-shadow: 0rem 0rem 0.25rem 0rem #b39892;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+h1,
+h2 {
+  @apply text-font;
+}
+
+p,
+li,
+span {
+  @apply text-alt-font;
+}
+
+.prices-h2 {
+  @apply mb-4 text-2xl text-center lg:text-4xl;
+}
+
+.prices-p {
+  @apply my-2 text-lg text-center lg:text-2xl;
+}
+
+.prices-img-wrapper {
+  @apply my-2 overflow-hidden rounded-3xl;
+}
+
+.prices-img {
+  @apply max-w-full;
+}
+
+.prices-img:fullscreen {
+  @apply object-contain;
+}
+
+.tos-li {
+  @apply my-8 text-center lg:text-2xl;
+}
+
+.tos-sub-li {
+  @apply block my-4 lg:text-2xl lg:font-normal;
+}
