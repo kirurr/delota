@@ -1,10 +1,20 @@
 import sqlite3 from 'sqlite3'
 import { open } from 'sqlite'
 import path from 'path'
+import 'dotenv/config'
 
 export async function openDb() {
-  return open({
-    filename: path.join(process.cwd(), '/public/delota.db'),
-    driver: sqlite3.cached.Database
-  })
+    let filename
+    if (process.env.NODE_ENV === 'production') {
+        filename = path.join(process.cwd(), '/public/delota.db')
+    } else {
+        // const assets = useStorage('assets:server')
+        // filename = await assets.getItem('delota.db')
+        filename = '/delota.db'
+    }
+    console.log(filename)
+    return open({
+        filename: filename,
+        driver: sqlite3.cached.Database
+    })
 }
