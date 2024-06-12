@@ -5,7 +5,7 @@ import 'dotenv/config'
 
 export async function openDb() {
     let filename
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env.NODE_ENV === 'development') {
         filename = path.join(process.cwd(), '/public/delota.db')
     } else {
         // const assets = useStorage('assets:server')
