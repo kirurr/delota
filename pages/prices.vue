@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 definePageMeta({ layout: 'pages' })
 useSeoMeta({ title: 'Prices' })
 
@@ -27,53 +26,53 @@ images.sort((a, b) => a.order - b.order)
 
     <section class="flex flex-col items-center">
       <span class="mb-2 text-2xl">✧</span>
-      <h2 class="prices-h2 max-w-[9ch]">Sketch from 30$</h2>
+      <h2 class="prices-h2 max-w-[9ch]">Sketch from 40$</h2>
       <p class="prices-p">~2000 pix. resolution</p>
       <p class="prices-p">
-        Add shading 10$
+        Add shading 20$
         <br />
-        Background (only with shading) 20$
+        Background (only with shading) 30$
         <br />
-        Add character 20$
+        Add character 30$
       </p>
       <div class="prices-img-wrapper">
-        <img
-          onclick="this.requestFullscreen()"
+        <NuxtImg
+          :src="images[0].url"
+          alt="Example image"
           class="prices-img fullscreen"
-          :src="images[0].image"
-          alt="Example image"
+          sizes="50vw sm:90vw"
         />
       </div>
       <div class="prices-img-wrapper">
-        <img
-          onclick="this.requestFullscreen()"
-          class="prices-img"
-          :src="images[1].image"
+        <NuxtImg
+          :src="images[1].url"
           alt="Example image"
+          class="prices-img fullscreen"
+          sizes="50vw sm:90vw"
         />
       </div>
       <div class="prices-img-wrapper">
-        <img
-          onclick="this.requestFullscreen()"
-          class="prices-img"
-          :src="images[2].image"
+        <NuxtImg
+          :src="images[2].url"
           alt="Example image"
+          class="prices-img fullscreen"
+          sizes="50vw sm:90vw"
         />
       </div>
       <div class="prices-img-wrapper">
-        <img
-          onclick="this.requestFullscreen()"
-          class="prices-img"
-          :src="images[3].image"
+        <NuxtImg
+          :src="images[3].url"
           alt="Example image"
+          class="prices-img fullscreen"
+          sizes="50vw sm:90vw"
         />
       </div>
       <div class="prices-img-wrapper">
-        <img
-          onclick="this.requestFullscreen()"
-          class="prices-img"
-          :src="images[4].image"
+        <NuxtImg
+          :src="images[4].url"
           alt="Example image"
+          class="prices-img fullscreen"
+          sizes="50vw sm:90vw"
         />
       </div>
     </section>
@@ -83,40 +82,40 @@ images.sort((a, b) => a.order - b.order)
       <h2 class="prices-h2 max-w-[20ch]">Full rendered painting from 100$</h2>
       <p class="prices-p">~4000 pix. resolution</p>
       <p class="prices-p">
-        Add character 70$
+        Add character 80$
         <br />
-        Background 60$
+        Background 70$
       </p>
       <div class="prices-img-wrapper">
-        <img
-          onclick="this.requestFullscreen()"
-          class="prices-img"
-          :src="images[5].image"
+        <NuxtImg
+          :src="images[5].url"
           alt="Example image"
+          class="prices-img fullscreen"
+          sizes="50vw sm:90vw"
         />
       </div>
       <div class="prices-img-wrapper">
-        <img
-          onclick="this.requestFullscreen()"
-          class="prices-img"
-          :src="images[6].image"
+        <NuxtImg
+          :src="images[6].url"
           alt="Example image"
+          class="prices-img fullscreen"
+          sizes="50vw sm:90vw"
         />
       </div>
       <div class="prices-img-wrapper">
-        <img
-          onclick="this.requestFullscreen()"
-          class="prices-img"
-          :src="images[7].image"
+        <NuxtImg
+          :src="images[7].url"
           alt="Example image"
+          class="prices-img fullscreen"
+          sizes="50vw sm:90vw"
         />
       </div>
       <div class="prices-img-wrapper">
-        <img
-          onclick="this.requestFullscreen()"
-          class="prices-img"
-          :src="images[8].image"
+        <NuxtImg
+          :src="images[8].url"
           alt="Example image"
+          class="prices-img fullscreen"
+          sizes="50vw sm:90vw"
         />
       </div>
     </section>

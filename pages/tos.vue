@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import type { ResultTosList } from '~/server/definition'
+import type { TosItem } from '~/server/definition'
 
 definePageMeta({ layout: 'pages' })
 useSeoMeta({ title: 'Terms of service' })
 
-const { data } = await useFetch<ResultTosList[]>('/api/tos')
+const { data } = await useFetch<Array<TosItem>>('/api/tos', { key: 'tos' })
 
 const list = data.value !== null ? data.value : []
 </script>

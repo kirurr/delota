@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { ResultTosList } from '~/server/definition'
+import type { TosItem } from '~/server/definition'
 
 const { list } = defineProps<{
-  list: ResultTosList[]
+  list: Array<TosItem>
 }>()
 </script>
 
@@ -11,10 +11,10 @@ const { list } = defineProps<{
     <li v-for="item in list" :key="item.id" class="tos-li">
       {{ item.content }}
       <span
-        v-for="sub_item in item.sub_items"
-        :key="sub_item.id"
+        v-for="subItem in item.subItems"
+        :key="subItem.id"
         class="tos-sub-li"
-        >{{ sub_item.content }}</span
+        >{{ subItem.content }}</span
       >
     </li>
   </ol>

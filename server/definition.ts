@@ -1,21 +1,19 @@
 export type Image = {
-    id: string
+    id: number
     order: number
-    image: string
+    name: string
+    url: string
 }
 
 export type TosItem = {
-    id: string
+    id: number
     content: string
     order: number
+    subItems?: TosSubItem[] | null
 }
 
 export type TosSubItem = {
-    id: string
+    id: number
     content: string
     order: number
 }
-
-export type ResultTosList = {
-    sub_items: TosSubItem[] | null
-} & TosItem

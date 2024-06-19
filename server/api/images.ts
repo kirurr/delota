@@ -1,16 +1,28 @@
-import { openDb } from '../database'
+import { db } from '../database'
+import { ImagesTable } from '../database/schema'
+import type { Image } from '../definition'
+import { getPricesBlobs } from '../blobs'
 
-type DBImage = { id: number; image: Buffer; order: number }
+export default defineCachedEventHandler(
+    async (): Promise<Array<Image>> => {
+        const [images, blob] = await Promise.all([
+            db.select().from(ImagesTable),
+            getPricesBlobs()
+        ])
 
-export default defineEventHandler(async () => {
-    const db = await openDb()
-    const data = await db.all<DBImage[]>('SELECT * FROM images')
+        const result = images.map((image) => ({
+            ...image,
+            url: blob.blobs.find((blobItem) =>
+                blobItem.pathname.includes(image.name)
+            )!.url
+        }))
 
-    return data.map((item) => {
-        return {
-            id: item.id,
-            image: `data:image/jpg;base64,${item.image.toString('base64')}`,
-            order: item.order
-        }
-    })
-})
+        return result
+    },
+    {
+        maxAge: 1000 * 60 * 60 * 24 * 7,
+        group: 'prices',
+        name: 'images',
+        getKey: () => 'all'
+    }
+)

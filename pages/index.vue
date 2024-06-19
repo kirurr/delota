@@ -1,6 +1,6 @@
 <template>
 	<article>
-		<section class="">
+		<section>
 			<h1 class="mb-2 text-2xl text-center xl:mb-4 lg:text-4xl">Delota</h1>
 			<div class="w-2/3 mx-auto overflow-hidden aspect-video rounded-xl">
 				<img src="/main_image.jpg" class="object-cover size-full">

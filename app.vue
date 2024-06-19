@@ -36,7 +36,7 @@ useSeoMeta({
 }
 
 #__nuxt {
-    @apply flex items-center justify-center min-h-screen md:py-8 px-8;
+    @apply flex items-center justify-center min-h-screen md:py-8 px-2 md:px-8;
 }
 
 #__nuxt::before {
