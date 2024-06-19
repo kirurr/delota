@@ -40,7 +40,6 @@ images.sort((a, b) => a.order - b.order)
           :src="images[0].url"
           alt="Example image"
           class="prices-img fullscreen"
-          sizes="50vw sm:90vw"
         />
       </div>
       <div class="prices-img-wrapper">
@@ -48,7 +47,6 @@ images.sort((a, b) => a.order - b.order)
           :src="images[1].url"
           alt="Example image"
           class="prices-img fullscreen"
-          sizes="50vw sm:90vw"
         />
       </div>
       <div class="prices-img-wrapper">
@@ -56,7 +54,6 @@ images.sort((a, b) => a.order - b.order)
           :src="images[2].url"
           alt="Example image"
           class="prices-img fullscreen"
-          sizes="50vw sm:90vw"
         />
       </div>
       <div class="prices-img-wrapper">
@@ -64,7 +61,6 @@ images.sort((a, b) => a.order - b.order)
           :src="images[3].url"
           alt="Example image"
           class="prices-img fullscreen"
-          sizes="50vw sm:90vw"
         />
       </div>
       <div class="prices-img-wrapper">
@@ -72,7 +68,6 @@ images.sort((a, b) => a.order - b.order)
           :src="images[4].url"
           alt="Example image"
           class="prices-img fullscreen"
-          sizes="50vw sm:90vw"
         />
       </div>
     </section>
@@ -91,7 +86,6 @@ images.sort((a, b) => a.order - b.order)
           :src="images[5].url"
           alt="Example image"
           class="prices-img fullscreen"
-          sizes="50vw sm:90vw"
         />
       </div>
       <div class="prices-img-wrapper">
@@ -99,7 +93,6 @@ images.sort((a, b) => a.order - b.order)
           :src="images[6].url"
           alt="Example image"
           class="prices-img fullscreen"
-          sizes="50vw sm:90vw"
         />
       </div>
       <div class="prices-img-wrapper">
@@ -107,7 +100,6 @@ images.sort((a, b) => a.order - b.order)
           :src="images[7].url"
           alt="Example image"
           class="prices-img fullscreen"
-          sizes="50vw sm:90vw"
         />
       </div>
       <div class="prices-img-wrapper">
@@ -115,7 +107,6 @@ images.sort((a, b) => a.order - b.order)
           :src="images[8].url"
           alt="Example image"
           class="prices-img fullscreen"
-          sizes="50vw sm:90vw"
         />
       </div>
     </section>
