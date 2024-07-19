@@ -1,3 +1,4 @@
+import { FullscreenModal } from '../.nuxt/components';
 <script setup lang="ts">
 definePageMeta({ layout: 'pages' })
 useSeoMeta({ title: 'Prices' })
@@ -5,10 +6,19 @@ useSeoMeta({ title: 'Prices' })
 const { data } = await useFetch('/api/images')
 const images = data.value !== null ? data.value : []
 images.sort((a, b) => a.order - b.order)
+
+const modalImage = ref<string | null>(null)
+const fullscreenModalRef = ref()
+
+function handleModal(imageUrl: string) {
+  modalImage.value = imageUrl
+  fullscreenModalRef.value?.show()
+}
 </script>
 
 <template>
   <article id="prices">
+    <button @click="handleModal('1')">Open modal</button>
     <section class="flex flex-col items-center mt-2">
       <h1 class="mb-2 tracking-widest text-center text-font md:text-2xl">
         Please read my TOS before commission:
@@ -35,41 +45,11 @@ images.sort((a, b) => a.order - b.order)
         <br />
         Add character 30$
       </p>
-      <div class="prices-img-wrapper">
-        <NuxtImg
-          :src="images[0].url"
-          alt="Example image"
-          class="prices-img fullscreen"
-        />
-      </div>
-      <div class="prices-img-wrapper">
-        <NuxtImg
-          :src="images[1].url"
-          alt="Example image"
-          class="prices-img fullscreen"
-        />
-      </div>
-      <div class="prices-img-wrapper">
-        <NuxtImg
-          :src="images[2].url"
-          alt="Example image"
-          class="prices-img fullscreen"
-        />
-      </div>
-      <div class="prices-img-wrapper">
-        <NuxtImg
-          :src="images[3].url"
-          alt="Example image"
-          class="prices-img fullscreen"
-        />
-      </div>
-      <div class="prices-img-wrapper">
-        <NuxtImg
-          :src="images[4].url"
-          alt="Example image"
-          class="prices-img fullscreen"
-        />
-      </div>
+      <Image :src="images[0].url" @click="handleModal(images[0].url)" />
+      <Image :src="images[1].url" @click="handleModal(images[1].url)" />
+      <Image :src="images[2].url" @click="handleModal(images[2].url)" />
+      <Image :src="images[3].url" @click="handleModal(images[3].url)" />
+      <Image :src="images[4].url" @click="handleModal(images[4].url)" />
     </section>
 
     <section class="flex flex-col items-center">
@@ -81,34 +61,10 @@ images.sort((a, b) => a.order - b.order)
         <br />
         Background 70$
       </p>
-      <div class="prices-img-wrapper">
-        <NuxtImg
-          :src="images[5].url"
-          alt="Example image"
-          class="prices-img fullscreen"
-        />
-      </div>
-      <div class="prices-img-wrapper">
-        <NuxtImg
-          :src="images[6].url"
-          alt="Example image"
-          class="prices-img fullscreen"
-        />
-      </div>
-      <div class="prices-img-wrapper">
-        <NuxtImg
-          :src="images[7].url"
-          alt="Example image"
-          class="prices-img fullscreen"
-        />
-      </div>
-      <div class="prices-img-wrapper">
-        <NuxtImg
-          :src="images[8].url"
-          alt="Example image"
-          class="prices-img fullscreen"
-        />
-      </div>
+      <Image :src="images[5].url" @click="handleModal(images[5].url)" />
+      <Image :src="images[6].url" @click="handleModal(images[6].url)" />
+      <Image :src="images[7].url" @click="handleModal(images[7].url)" />
+      <Image :src="images[8].url" @click="handleModal(images[8].url)" />
     </section>
 
     <section class="flex flex-col items-center">
@@ -123,5 +79,7 @@ images.sort((a, b) => a.order - b.order)
         <li>Desired colors and mood for art, your idea</li>
       </ol>
     </section>
+
+    <Fullscreen-Modal ref="fullscreenModalRef" :image-url="modalImage" />
   </article>
 </template>

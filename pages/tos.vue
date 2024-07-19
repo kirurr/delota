@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { TosItem } from '~/server/definition'
 
-definePageMeta({ layout: 'pages' })
+definePageMeta({ layout: 'tos-page' })
 useSeoMeta({ title: 'Terms of service' })
 
 const { data } = await useFetch<Array<TosItem>>('/api/tos', { key: 'tos' })
