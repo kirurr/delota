@@ -18,7 +18,7 @@ function handleModal(imageUrl: string) {
 
 <template>
   <article id="prices">
-    <button @click="handleModal('1')">Open modal</button>
+    <!-- <button @click="handleModal('1')">Open modal</button> -->
     <section class="flex flex-col items-center mt-2">
       <h1 class="mb-2 tracking-widest text-center text-font md:text-2xl">
         Please read my TOS before commission:
@@ -54,7 +54,7 @@ function handleModal(imageUrl: string) {
 
     <section class="flex flex-col items-center">
       <span class="mb-2 text-2xl">✧</span>
-      <h2 class="prices-h2 max-w-[20ch]">Full rendered painting from 100$</h2>
+      <h2 class="prices-h2 max-w-[20ch]">Full rendered painting from 200$</h2>
       <p class="prices-p">~4000 pix. resolution</p>
       <p class="prices-p">
         Add character 80$
