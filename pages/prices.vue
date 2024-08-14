@@ -51,10 +51,9 @@ function handleModal(imageUrl: string) {
       <Image :src="images[3].url" @click="handleModal(images[3].url)" />
       <Image :src="images[4].url" @click="handleModal(images[4].url)" />
     </section>
-
     <section class="flex flex-col items-center">
       <span class="mb-2 text-2xl">✧</span>
-      <h2 class="prices-h2 max-w-[20ch]">Full rendered painting from 200$</h2>
+      <h2 class="prices-h2 max-w-[20ch]">Full rendered painting from 100$</h2>
       <p class="prices-p">~4000 pix. resolution</p>
       <p class="prices-p">
         Add character 80$
