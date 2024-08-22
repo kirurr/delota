@@ -6,6 +6,7 @@
 				<img src="/main_image.jpg" class="object-cover size-full">
 			</div>
 			<p class="my-2 tracking-widest text-center xl:text-2xl !text-font xl:max-w-[50rem] xl:block xl:mx-auto text-pretty">I draw animals and furries of all kinds, fantasy creatures, taurs and monsters. SFW only</p>
+			<p class="mt-6 text-center tracking-widest text-alt-font xl:text-2xl">commisions: open</p>
 		</section>
 		<section class="flex flex-col items-center mt-8 mb-2">
 			<a class="mb-2 tracking-widest underline text-alt-font xl:text-2xl hover:scale-105 transition-all" href="https://t.me/delota35">Telegram @delota35</a>
