@@ -38,7 +38,7 @@
   }
 
   .prices-img-wrapper {
-    @apply my-2 overflow-hidden rounded-3xl;
+    @apply my-2 overflow-hidden rounded-3xl max-w-full;
   }
 
   .prices-img {

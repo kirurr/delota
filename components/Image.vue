@@ -4,6 +4,8 @@ const { src } = defineProps<{ src: string }>()
 
 <template>
   <div class="prices-img-wrapper">
-    <NuxtImg :src="src" alt="Example image" class="prices-img cursor-pointer" />
+    <div>
+      <NuxtImg :src="src" alt="Example image" class="prices-img cursor-pointer" />
+    </div>
   </div>
 </template>

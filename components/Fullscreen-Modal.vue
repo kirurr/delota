@@ -36,8 +36,6 @@ defineExpose({
     @click="closeModal()"
   >
     <Nuxt-Img :src="imageUrl!" class="size-full object-contain" />
-    <button class="absolute top-0 right-0 z-50">
-      <Nuxt-Img src="/icons/close.png" class="p-2" />
-    </button>
+    <button class="absolute top-0 right-0 z-50">x</button>
   </dialog>
 </template>

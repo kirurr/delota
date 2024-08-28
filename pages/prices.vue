@@ -1,11 +1,11 @@
 import { FullscreenModal } from '../.nuxt/components';
 <script setup lang="ts">
+import type { Image } from '~/server/definition';
+
 definePageMeta({ layout: 'pages' })
 useSeoMeta({ title: 'Prices' })
 
-const { data } = await useFetch('/api/images')
-const images = data.value !== null ? data.value : []
-images.sort((a, b) => a.order - b.order)
+const { data, pending } = await useFetch<Array<Image>>('/api/images', { lazy: true })
 
 const modalImage = ref<string | null>(null)
 const fullscreenModalRef = ref()
@@ -18,7 +18,6 @@ function handleModal(imageUrl: string) {
 
 <template>
   <article id="prices">
-    <!-- <button @click="handleModal('1')">Open modal</button> -->
     <section class="flex flex-col items-center mt-2">
       <h1 class="mb-2 tracking-widest text-center text-font md:text-2xl">
         Please read my TOS before commission:
@@ -45,11 +44,20 @@ function handleModal(imageUrl: string) {
         <br />
         Add character 30$
       </p>
-      <Image :src="images[0].url" @click="handleModal(images[0].url)" />
-      <Image :src="images[1].url" @click="handleModal(images[1].url)" />
-      <Image :src="images[2].url" @click="handleModal(images[2].url)" />
-      <Image :src="images[3].url" @click="handleModal(images[3].url)" />
-      <Image :src="images[4].url" @click="handleModal(images[4].url)" />
+      <div v-if="pending" class="w-full space-y-4 overflow-hidden" >
+        <div class="bg-[#ab9993] animate-pulse h-[20rem] w-screen prices-img-wrapper"></div>
+        <div class="bg-[#ab9993] animate-pulse h-[20rem] w-screen prices-img-wrapper"></div>
+        <div class="bg-[#ab9993] animate-pulse h-[20rem] w-screen prices-img-wrapper"></div>
+        <div class="bg-[#ab9993] animate-pulse h-[20rem] w-screen prices-img-wrapper"></div>
+        <div class="bg-[#ab9993] animate-pulse h-[20rem] w-screen prices-img-wrapper"></div>
+      </div>
+      <div v-else>
+        <Image :src="data![0].url" @click="handleModal(data![0].url)" />
+        <Image :src="data![1].url" @click="handleModal(data![1].url)" />
+        <Image :src="data![2].url" @click="handleModal(data![2].url)" />
+        <Image :src="data![3].url" @click="handleModal(data![3].url)" />
+        <Image :src="data![4].url" @click="handleModal(data![4].url)" />
+      </div>
     </section>
     <section class="flex flex-col items-center">
       <span class="mb-2 text-2xl">✧</span>
@@ -60,10 +68,19 @@ function handleModal(imageUrl: string) {
         <br />
         Background 70$
       </p>
-      <Image :src="images[5].url" @click="handleModal(images[5].url)" />
-      <Image :src="images[6].url" @click="handleModal(images[6].url)" />
-      <Image :src="images[7].url" @click="handleModal(images[7].url)" />
-      <Image :src="images[8].url" @click="handleModal(images[8].url)" />
+      <div v-if="pending" class="w-full space-y-4 overflow-hidden" >
+        <div class="bg-[#ab9993] animate-pulse h-[20rem] w-screen prices-img-wrapper"></div>
+        <div class="bg-[#ab9993] animate-pulse h-[20rem] w-screen prices-img-wrapper"></div>
+        <div class="bg-[#ab9993] animate-pulse h-[20rem] w-screen prices-img-wrapper"></div>
+        <div class="bg-[#ab9993] animate-pulse h-[20rem] w-screen prices-img-wrapper"></div>
+        <div class="bg-[#ab9993] animate-pulse h-[20rem] w-screen prices-img-wrapper"></div>
+      </div>
+      <div v-else>
+        <Image :src="data![5].url" @click="handleModal(data![5].url)" />
+        <Image :src="data![6].url" @click="handleModal(data![6].url)" />
+        <Image :src="data![7].url" @click="handleModal(data![7].url)" />
+        <Image :src="data![8].url" @click="handleModal(data![8].url)" />
+      </div>
     </section>
 
     <section class="flex flex-col items-center">
