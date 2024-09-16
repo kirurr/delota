@@ -45,11 +45,11 @@ function handleModal(imageUrl: string) {
         Add character 30$
       </p>
       <div v-if="pending" class="w-full space-y-4 overflow-hidden" >
-        <div class="bg-[#ab9993] animate-pulse h-[20rem] w-screen prices-img-wrapper"></div>
-        <div class="bg-[#ab9993] animate-pulse h-[20rem] w-screen prices-img-wrapper"></div>
-        <div class="bg-[#ab9993] animate-pulse h-[20rem] w-screen prices-img-wrapper"></div>
-        <div class="bg-[#ab9993] animate-pulse h-[20rem] w-screen prices-img-wrapper"></div>
-        <div class="bg-[#ab9993] animate-pulse h-[20rem] w-screen prices-img-wrapper"></div>
+        <div class="placeholder h-[30rem] rounded-3xl"></div>
+        <div class="placeholder h-[30rem] rounded-3xl"></div>
+        <div class="placeholder h-[30rem] rounded-3xl"></div>
+        <div class="placeholder h-[30rem] rounded-3xl"></div>
+        <div class="placeholder h-[30rem] rounded-3xl"></div>
       </div>
       <div v-else>
         <Image :src="data![0].url" @click="handleModal(data![0].url)" />
@@ -69,11 +69,11 @@ function handleModal(imageUrl: string) {
         Background 70$
       </p>
       <div v-if="pending" class="w-full space-y-4 overflow-hidden" >
-        <div class="bg-[#ab9993] animate-pulse h-[20rem] w-screen prices-img-wrapper"></div>
-        <div class="bg-[#ab9993] animate-pulse h-[20rem] w-screen prices-img-wrapper"></div>
-        <div class="bg-[#ab9993] animate-pulse h-[20rem] w-screen prices-img-wrapper"></div>
-        <div class="bg-[#ab9993] animate-pulse h-[20rem] w-screen prices-img-wrapper"></div>
-        <div class="bg-[#ab9993] animate-pulse h-[20rem] w-screen prices-img-wrapper"></div>
+        <div class="placeholder h-[30rem] rounded-3xl"></div>
+        <div class="placeholder h-[30rem] rounded-3xl"></div>
+        <div class="placeholder h-[30rem] rounded-3xl"></div>
+        <div class="placeholder h-[30rem] rounded-3xl"></div>
+        <div class="placeholder h-[30rem] rounded-3xl"></div>
       </div>
       <div v-else>
         <Image :src="data![5].url" @click="handleModal(data![5].url)" />

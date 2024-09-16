@@ -13,12 +13,12 @@ const { data, pending } = await useFetch<Array<TosItem>>('/api/tos', { key: 'tos
     <h1 class="mb-2 text-2xl text-center lg:text-3xl">Terms of service</h1>
     <p class="mb-2 text-xl">✧</p>
     <div v-if="pending" class="w-full space-y-4" >
-      <div class="bg-[#ab9993] animate-pulse h-6 w-full rounded prices-img"></div>
-      <div class="bg-[#ab9993] animate-pulse h-12 w-full rounded prices-img"></div>
-      <div class="bg-[#ab9993] animate-pulse h-6 w-full rounded prices-img"></div>
-      <div class="bg-[#ab9993] animate-pulse h-12 w-full rounded prices-img"></div>
-      <div class="bg-[#ab9993] animate-pulse h-6 w-full rounded prices-img"></div>
-      <div class="bg-[#ab9993] animate-pulse h-6 w-full rounded prices-img"></div>
+      <div class="placeholder rounded h-6"></div>
+      <div class="placeholder rounded h-12"></div>
+      <div class="placeholder rounded h-6"></div>
+      <div class="placeholder rounded h-6"></div>
+      <div class="placeholder rounded h-12"></div>
+      <div class="placeholder rounded h-6"></div>
     </div>
     <div v-else>
       <Tos-List :list="data ?? []" />

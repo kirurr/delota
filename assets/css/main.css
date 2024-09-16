@@ -56,6 +56,11 @@
   .tos-sub-li {
     @apply block my-4 lg:text-2xl lg:font-normal;
   }
+
+  .placeholder {
+    @apply bg-[#ab999381] animate-pulse w-full max-w-full;
+  }
+
 }
 
 html {

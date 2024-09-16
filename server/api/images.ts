@@ -10,7 +10,7 @@ const options = {
     getKey: () => 'all'
 }
 
-export default defineCachedEventHandler(async (): Promise<Array<Image>> => {
+async function imagesHandler(): Promise<Array<Image>> {
     const [images, blob] = await Promise.all([
         db.select().from(ImagesTable),
         getPricesBlobs()
@@ -24,4 +24,10 @@ export default defineCachedEventHandler(async (): Promise<Array<Image>> => {
     }))
 
     return result
-}, options)
+}
+
+export default defineCachedEventHandler(imagesHandler, options)
+// export default defineEventHandler(async () => {
+//     await new Promise((resolve) => setTimeout(resolve, 3000));
+//     return await imagesHandler();
+// })
