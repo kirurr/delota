@@ -35,14 +35,14 @@ function handleModal(imageUrl: string) {
 
     <section class="flex flex-col items-center">
       <span class="mb-2 text-2xl">✧</span>
-      <h2 class="prices-h2 max-w-[9ch]">Sketch from 40$</h2>
+      <h2 class="prices-h2 max-w-[9ch]">Sketch from 30$</h2>
       <p class="prices-p">~2000 pix. resolution</p>
       <p class="prices-p">
-        Add shading 20$
+        Add shading 15$
         <br />
-        Background (only with shading) 30$
+        Background (only with shading) 20$
         <br />
-        Add character 30$
+        Add character 20$
       </p>
       <div v-if="pending" class="w-full space-y-4 overflow-hidden" >
         <div class="placeholder h-[30rem] rounded-3xl"></div>
@@ -61,12 +61,12 @@ function handleModal(imageUrl: string) {
     </section>
     <section class="flex flex-col items-center">
       <span class="mb-2 text-2xl">✧</span>
-      <h2 class="prices-h2 max-w-[20ch]">Full rendered painting from 100$</h2>
+      <h2 class="prices-h2 max-w-[20ch]">Full rendered painting from 80$</h2>
       <p class="prices-p">~4000 pix. resolution</p>
       <p class="prices-p">
-        Add character 80$
+        Add character 60$
         <br />
-        Background 70$
+        Background 60$
       </p>
       <div v-if="pending" class="w-full space-y-4 overflow-hidden" >
         <div class="placeholder h-[30rem] rounded-3xl"></div>
