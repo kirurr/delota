@@ -1,18 +1,20 @@
 import { FullscreenModal } from '../.nuxt/components';
 <script setup lang="ts">
-import type { Image } from '~/server/definition';
+import type { Image } from "~/server/definition";
 
-definePageMeta({ layout: 'pages' })
-useSeoMeta({ title: 'Prices' })
+definePageMeta({ layout: "pages" });
+useSeoMeta({ title: "Prices" });
 
-const { data, pending } = await useFetch<Array<Image>>('/api/images', { lazy: true })
+const { data, pending } = await useFetch<Array<Image>>("/api/images", {
+  lazy: true,
+});
 
-const modalImage = ref<string | null>(null)
-const fullscreenModalRef = ref()
+const modalImage = ref<string | null>(null);
+const fullscreenModalRef = ref();
 
 function handleModal(imageUrl: string) {
-  modalImage.value = imageUrl
-  fullscreenModalRef.value?.show()
+  modalImage.value = imageUrl;
+  fullscreenModalRef.value?.show();
 }
 </script>
 
@@ -36,15 +38,19 @@ function handleModal(imageUrl: string) {
     <section class="flex flex-col items-center">
       <span class="mb-2 text-2xl">✧</span>
       <h2 class="prices-h2 max-w-[9ch]">Sketch from 30$</h2>
-      <p class="prices-p">~2000 pix. resolution</p>
+      <p class="prices-p">
+        ~2000 pix. resolution
+        <br />
+        simple background/fill
+      </p>
       <p class="prices-p">
         Add shading 15$
         <br />
-        Background (only with shading) 20$
+        Complex background 20$
         <br />
         Add character 20$
       </p>
-      <div v-if="pending" class="w-full space-y-4 overflow-hidden" >
+      <div v-if="pending" class="w-full space-y-4 overflow-hidden">
         <div class="placeholder h-[30rem] rounded-3xl"></div>
         <div class="placeholder h-[30rem] rounded-3xl"></div>
         <div class="placeholder h-[30rem] rounded-3xl"></div>
@@ -52,6 +58,7 @@ function handleModal(imageUrl: string) {
         <div class="placeholder h-[30rem] rounded-3xl"></div>
       </div>
       <div v-else>
+        <Image :src="data![9].url" @click="handleModal(data![9].url)" />
         <Image :src="data![0].url" @click="handleModal(data![0].url)" />
         <Image :src="data![1].url" @click="handleModal(data![1].url)" />
         <Image :src="data![2].url" @click="handleModal(data![2].url)" />
@@ -62,13 +69,17 @@ function handleModal(imageUrl: string) {
     <section class="flex flex-col items-center">
       <span class="mb-2 text-2xl">✧</span>
       <h2 class="prices-h2 max-w-[20ch]">Full rendered painting from 80$</h2>
-      <p class="prices-p">~4000 pix. resolution</p>
+      <p class="prices-p">
+        ~4000 pix. resolution
+        <br />
+        simple background/fill
+      </p>
       <p class="prices-p">
         Add character 60$
         <br />
-        Background 60$
+        Complex background 60$
       </p>
-      <div v-if="pending" class="w-full space-y-4 overflow-hidden" >
+      <div v-if="pending" class="w-full space-y-4 overflow-hidden">
         <div class="placeholder h-[30rem] rounded-3xl"></div>
         <div class="placeholder h-[30rem] rounded-3xl"></div>
         <div class="placeholder h-[30rem] rounded-3xl"></div>
@@ -76,10 +87,10 @@ function handleModal(imageUrl: string) {
         <div class="placeholder h-[30rem] rounded-3xl"></div>
       </div>
       <div v-else>
+        <Image :src="data![8].url" @click="handleModal(data![8].url)" />
         <Image :src="data![5].url" @click="handleModal(data![5].url)" />
         <Image :src="data![6].url" @click="handleModal(data![6].url)" />
         <Image :src="data![7].url" @click="handleModal(data![7].url)" />
-        <Image :src="data![8].url" @click="handleModal(data![8].url)" />
       </div>
     </section>
 
