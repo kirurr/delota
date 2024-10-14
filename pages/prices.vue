@@ -60,8 +60,8 @@ function handleModal(imageUrl: string) {
       <div v-else>
         <Image :src="data![9].url" @click="handleModal(data![9].url)" />
         <Image :src="data![0].url" @click="handleModal(data![0].url)" />
-        <Image :src="data![1].url" @click="handleModal(data![1].url)" />
         <Image :src="data![2].url" @click="handleModal(data![2].url)" />
+        <Image :src="data![1].url" @click="handleModal(data![1].url)" />
         <Image :src="data![3].url" @click="handleModal(data![3].url)" />
         <Image :src="data![4].url" @click="handleModal(data![4].url)" />
       </div>
