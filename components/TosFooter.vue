@@ -1,16 +1,5 @@
 <template>
   <footer class="flex flex-col items-center mt-2">
-    <span class="mb-2 text-2xl text-alt-font">✧</span>
-    <a
-      class="mb-2 tracking-widest underline text-alt-font md:text-2xl hover:scale-105 transition-all"
-      href="https://t.me/delota35"
-      >Telegram @delota35</a
-    >
-    <a
-      class="mb-4 tracking-widest underline text-alt-font md:text-2xl hover:scale-105 transition-all lg:mb-8"
-      href="mailto:delota35art@gmail.com"
-      >delota35art@gmail.com</a
-    >
     <NuxtLink
       class="w-full tracking-[0.4rem] font-[300] py-[0.25rem] text-center button !bg-[#93a5ab] mb-2 md:w-fit md:px-4 md:py-2 md:text-2xl"
       to="/prices"

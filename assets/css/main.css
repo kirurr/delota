@@ -53,6 +53,10 @@
     @apply my-8 text-center lg:text-2xl;
   }
 
+	.tos-li::marker {
+		@apply font-bold;
+	}
+
   .tos-sub-li {
     @apply block my-4 lg:text-2xl lg:font-normal;
   }
