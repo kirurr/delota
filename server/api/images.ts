@@ -17,13 +17,16 @@ async function imagesHandler(): Promise<Array<Image>> {
     getPricesBlobs(),
   ]);
 
+  useStorage("cache").removeItem(
+    `nitro:${options.group}:${options.name}:${options.getKey()}.json`,
+  );
+
   const result = images.map((image) => ({
     ...image,
     url: blob.blobs.find((blobItem) => blobItem.pathname.includes(image.name))!
       .url,
   }));
 
-  console.log(result);
   return result;
 }
 
