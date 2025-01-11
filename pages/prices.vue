@@ -87,10 +87,10 @@ function handleModal(imageUrl: string) {
         <div class="placeholder h-[30rem] rounded-3xl"></div>
       </div>
       <div v-else>
+        <Image :src="data![6].url" @click="handleModal(data![6].url)" />
         <Image :src="data![8].url" @click="handleModal(data![8].url)" />
         <Image :src="data![10].url" @click="handleModal(data![10].url)" />
         <Image :src="data![5].url" @click="handleModal(data![5].url)" />
-        <Image :src="data![6].url" @click="handleModal(data![6].url)" />
         <Image :src="data![7].url" @click="handleModal(data![7].url)" />
       </div>
     </section>
