@@ -9,8 +9,9 @@
 			<p class="mt-6 text-center tracking-widest text-alt-font xl:text-2xl">✧ commisions: open</p>
 		</section>
 		<section class="flex flex-col items-center mt-8 mb-2">
-			<a class="mb-2 tracking-widest underline text-alt-font xl:text-2xl hover:scale-105 transition-all" href="https://t.me/delota35">Telegram @delota35</a>
-			<a class="mb-4 tracking-widest underline text-alt-font xl:text-2xl hover:scale-105 transition-all" href="mailto:delota35art@gmail.com">delota35art@gmail.com</a>
+			<a class="mb-2 tracking-widest underline text-alt-font xl:text-2xl hover:scale-105 transition-all" href="https://discord.gg/x75b98N9" target="_blank">Discord delota_art</a>
+			<a class="mb-2 tracking-widest underline text-alt-font xl:text-2xl hover:scale-105 transition-all" href="https://t.me/delota35" target="_blank">Telegram @delota35</a>
+			<a class="mb-4 tracking-widest underline text-alt-font xl:text-2xl hover:scale-105 transition-all" href="mailto:delota35art@gmail.com" target="_blank">delota35art@gmail.com</a>
 		</section>
 		<section class="flex flex-col items-center mb-0">
 			<NuxtLink class="w-full md:w-[55%] text-center md:mb-4 mb-2 tracking-[0.3rem] font-[300] py-[0.25rem] !bg-[#93a5ab] button xl:text-2xl xl:w-fit xl:px-32 xl:py-2" to="/prices">Prices</NuxtLink>

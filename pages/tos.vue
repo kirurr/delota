@@ -42,7 +42,7 @@ useSeoMeta({ title: "Terms of service" });
         You cannot assign ownership, edit the artwork. Allow to commercial use
         +200$.
       </li>
-      <li class="tos-li">Communication via Telegram or email.</li>
+      <li class="tos-li">Communication via Discord, Telegram or email.</li>
       <li class="tos-li">
         In the process I will send you the stages for edits. On final stage
         edits may require additional payment, depending on the complexity.
