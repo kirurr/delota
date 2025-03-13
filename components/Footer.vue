@@ -3,7 +3,7 @@
     <span class="mb-2 text-2xl text-alt-font">✧</span>
     <a
       class="mb-2 tracking-widest underline text-alt-font md:text-2xl hover:scale-105 transition-all"
-      href="https://discord.gg/x75b98N9"
+      href="https://discord.gg/yVVHF9YZzY"
       target="_blank"
       >Discord delota_art</a>
     <a

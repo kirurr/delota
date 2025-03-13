@@ -21,8 +21,7 @@ useSeoMeta({ title: "Terms of service" });
       </li>
 
       <li class="tos-li">
-        Full payment before the start of work via Paypal by invoice or by buying
-        a commission in my digital shop.
+        Full payment before the start of work via Paypal by buying a commission in my digital shop or by donation.
         <a
           class="block mx-auto mt-4 w-full tracking-[0.4rem] font-[300] py-[0.25rem] text-center button !bg-[#93a5ab] mb-2 md:w-fit md:px-4 md:py-2 md:text-2xl scale-95"
           href="https://app.lava.top/en/products/7ec28b95-dcb0-4e75-b6de-0a395b5c46bb"
@@ -30,8 +29,8 @@ useSeoMeta({ title: "Terms of service" });
           🎨 digital shop</a
         >
         <span class="tos-sub-li">
-          From 200$ it's possible to do prepaid 50% before the start of work and
-          50% after final via Paypal invoice.</span
+          From 200$ it's possible to do prepaid 50% before the start of work and 50% after final by donation.
+        </span
         >
       </li>
 
