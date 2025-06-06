@@ -44,9 +44,9 @@ function handleModal(imageUrl: string) {
         simple background/fill
       </p>
       <p class="prices-p">
-        Add shading 15$
+        Add shading 10$
         <br />
-        Complex background 20$
+        Complex background 20$ (if shading added)
         <br />
         Add character 20$
       </p>
