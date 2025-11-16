@@ -50,7 +50,7 @@
   }
 
   .tos-li {
-    @apply my-8 text-center lg:text-2xl;
+    @apply my-8 text-start lg:text-2xl;
   }
 
 	.tos-li::marker {

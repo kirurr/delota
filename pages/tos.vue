@@ -11,7 +11,7 @@ useSeoMeta({ title: "Terms of service" });
   <article class="flex flex-col items-center lg:w-[65cgh]">
     <h1 class="mb-2 text-2xl text-center lg:text-3xl">Terms of service</h1>
     <p class="mb-2 text-xl">✧</p>
-    <ol class="list-decimal list-inside">
+    <ol class="list-decimal list-inside space-y-12">
       <li class="tos-li">
         Cost of the work and the deadline will be announced after discussing
         your idea and approximate composition.

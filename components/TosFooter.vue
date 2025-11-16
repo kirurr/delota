@@ -1,5 +1,5 @@
 <template>
-  <footer class="flex flex-col items-center mt-2">
+  <footer class="flex flex-col items-center mt-8">
     <NuxtLink
       class="w-full tracking-[0.4rem] font-[300] py-[0.25rem] text-center button !bg-[#93a5ab] mb-2 md:w-fit md:px-4 md:py-2 md:text-2xl"
       to="/prices"

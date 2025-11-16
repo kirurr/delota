@@ -29,10 +29,6 @@ function handleModal(imageUrl: string) {
         to="/tos"
         >Terms of service 📋</NuxtLink
       >
-      <p class="prices-p !text-[1.40rem] max-w-[40ch]">
-        Below are approximate prices for all formats (headshot, bust, full
-        height etc.)
-      </p>
     </section>
 
     <section class="flex flex-col items-center">
@@ -43,13 +39,29 @@ function handleModal(imageUrl: string) {
         <br />
         simple background/fill
       </p>
-      <p class="prices-p">
-        Add shading 10$
-        <br />
-        Complex background 20$ (if shading added)
-        <br />
-        Add character 20$
-      </p>
+      <ul class="prices-p text-start space-y-2 list-disc mt-6">
+        <li>
+          <div class="flex">
+            <span>Add shading</span>
+            <span class="ml-auto font-semibold">10$</span>
+          </div>
+        </li>
+        <li>
+          <div class="flex">
+            <span
+              >Complex bg <br />
+              (if shading added)</span
+            >
+            <span class="ml-auto font-semibold">20$</span>
+          </div>
+        </li>
+        <li>
+          <div class="flex">
+            <span>Add character</span>
+            <span class="ml-auto font-semibold">20$</span>
+          </div>
+        </li>
+      </ul>
       <div v-if="pending" class="w-full space-y-4 overflow-hidden">
         <div class="placeholder h-[30rem] rounded-3xl"></div>
         <div class="placeholder h-[30rem] rounded-3xl"></div>
@@ -58,11 +70,11 @@ function handleModal(imageUrl: string) {
         <div class="placeholder h-[30rem] rounded-3xl"></div>
       </div>
       <div v-else>
-        <Image :src="data![9].url" @click="handleModal(data![9].url)" />
+        <Image :src="'/prices/4.jpg'" @click="handleModal('prices/4.jpg')" />
         <Image :src="data![0].url" @click="handleModal(data![0].url)" />
+        <Image :src="data![9].url" @click="handleModal(data![9].url)" />
         <Image :src="data![2].url" @click="handleModal(data![2].url)" />
-        <Image :src="data![1].url" @click="handleModal(data![1].url)" />
-        <Image :src="data![3].url" @click="handleModal(data![3].url)" />
+        <Image :src="'/prices/furry.jpg'" @click="handleModal('prices/furry.jpg')" />
         <Image :src="data![4].url" @click="handleModal(data![4].url)" />
       </div>
     </section>
@@ -74,11 +86,20 @@ function handleModal(imageUrl: string) {
         <br />
         simple background/fill
       </p>
-      <p class="prices-p">
-        Add character 60$
-        <br />
-        Complex background 60$
-      </p>
+      <ul class="prices-p text-start space-y-2 list-disc mt-6 w-1/3">
+        <li>
+          <div class="flex">
+            <span>Add character</span>
+						<span class="ml-auto font-semibold">60$</span>
+          </div>
+        </li>
+        <li>
+          <div class="flex">
+            <span>Complex bg</span>
+            <span class="ml-auto font-semibold">60$</span>
+          </div>
+        </li>
+      </ul>
       <div v-if="pending" class="w-full space-y-4 overflow-hidden">
         <div class="placeholder h-[30rem] rounded-3xl"></div>
         <div class="placeholder h-[30rem] rounded-3xl"></div>
