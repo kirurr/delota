@@ -31,7 +31,7 @@ useSeoMeta({ title: "Terms of service" });
       <li class="tos-li">
         I retain the right to display all artwork on my social media.
       </li>
-      <li class="tos-li">My art is for non commercial use only</li>
+      <li class="tos-li">You cannot assign ownership, edit the artwork. My art is for non commercial use only.</li>
       <li class="tos-li">Communication via Discord, Telegram or email.</li>
       <li class="tos-li">
         In the process I will send you the stages for edits. On final stage
