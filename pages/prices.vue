@@ -1,14 +1,7 @@
 import { FullscreenModal } from '../.nuxt/components';
 <script setup lang="ts">
-import type { Image } from "~/server/definition";
-
 definePageMeta({ layout: "pages" });
 useSeoMeta({ title: "Prices" });
-
-const { data, pending } = await useFetch<Array<Image>>("/api/images", {
-  lazy: true,
-});
-
 const modalImage = ref<string | null>(null);
 const fullscreenModalRef = ref();
 
@@ -62,20 +55,13 @@ function handleModal(imageUrl: string) {
           </div>
         </li>
       </ul>
-      <div v-if="pending" class="w-full space-y-4 overflow-hidden">
-        <div class="placeholder h-[30rem] rounded-3xl"></div>
-        <div class="placeholder h-[30rem] rounded-3xl"></div>
-        <div class="placeholder h-[30rem] rounded-3xl"></div>
-        <div class="placeholder h-[30rem] rounded-3xl"></div>
-        <div class="placeholder h-[30rem] rounded-3xl"></div>
-      </div>
-      <div v-else>
-        <Image :src="'/prices/4.jpg'" @click="handleModal('prices/4.jpg')" />
-        <Image :src="data![0].url" @click="handleModal(data![0].url)" />
-        <Image :src="data![9].url" @click="handleModal(data![9].url)" />
-        <Image :src="data![2].url" @click="handleModal(data![2].url)" />
-        <Image :src="'/prices/furry.jpg'" @click="handleModal('prices/furry.jpg')" />
-        <Image :src="data![4].url" @click="handleModal(data![4].url)" />
+      <div>
+        <Image :src="'/images/1.jpg'" @click="handleModal('images/1.jpg')" />
+        <Image :src="'/images/2.jpg'" @click="handleModal('images/2.jpg')" />
+        <Image :src="'/images/3.jpg'" @click="handleModal('images/3.jpg')" />
+        <Image :src="'/images/4.jpg'" @click="handleModal('images/4.jpg')" />
+        <Image :src="'/images/5.jpg'" @click="handleModal('images/5.jpg')" />
+        <Image :src="'/images/6.jpg'" @click="handleModal('images/6.jpg')" />
       </div>
     </section>
     <section class="flex flex-col items-center">
@@ -90,7 +76,7 @@ function handleModal(imageUrl: string) {
         <li>
           <div class="flex">
             <span>Add character</span>
-						<span class="ml-auto font-semibold">60$</span>
+            <span class="ml-auto font-semibold">60$</span>
           </div>
         </li>
         <li>
@@ -100,19 +86,12 @@ function handleModal(imageUrl: string) {
           </div>
         </li>
       </ul>
-      <div v-if="pending" class="w-full space-y-4 overflow-hidden">
-        <div class="placeholder h-[30rem] rounded-3xl"></div>
-        <div class="placeholder h-[30rem] rounded-3xl"></div>
-        <div class="placeholder h-[30rem] rounded-3xl"></div>
-        <div class="placeholder h-[30rem] rounded-3xl"></div>
-        <div class="placeholder h-[30rem] rounded-3xl"></div>
-      </div>
-      <div v-else>
-        <Image :src="data![6].url" @click="handleModal(data![6].url)" />
-        <Image :src="data![8].url" @click="handleModal(data![8].url)" />
-        <Image :src="data![10].url" @click="handleModal(data![10].url)" />
-        <Image :src="data![5].url" @click="handleModal(data![5].url)" />
-        <Image :src="data![7].url" @click="handleModal(data![7].url)" />
+      <div>
+        <Image :src="'/images/7.jpg'" @click="handleModal('images/7.jpg')" />
+        <Image :src="'/images/8.jpg'" @click="handleModal('images/8.jpg')" />
+        <Image :src="'/images/9.jpg'" @click="handleModal('images/9.jpg')" />
+        <Image :src="'/images/10.jpg'" @click="handleModal('images/10.jpg')" />
+        <Image :src="'/images/11.jpg'" @click="handleModal('images/11.jpg')" />
       </div>
     </section>
 

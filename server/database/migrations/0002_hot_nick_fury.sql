@@ -1,1 +1,0 @@
-ALTER TABLE "Images" RENAME COLUMN "image" TO "name";
